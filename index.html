@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Template</title>
+</head>
+<body>
+    <h1>Fill in the Form to Generate the Bail Application</h1>
+    <h1>Date:</h1>
+    <p id="date"></p>
+
+    <script>
+        function setCurrentDate() {
+            const today = new Date();
+            const formattedDate = today.toISOString().split('T')[0]; 
+            document.getElementById("currentDate").value = formattedDate;
+        }
+    </script>
+
+    <form method="POST" onsubmit="setCurrentDate()">
+        <input type="hidden" id="currentDate" name="currentDate">
+
+        <label for="court">Court:</label>
+        <input type="text" id="court" name="court" required><br><br>
+
+        <label for="place">Place:</label>
+        <input type="text" id="place" name="place" required><br><br>
+
+        <label for="state">State:</label>
+        <input type="state" id="state" name="state" required><br><br>
+
+        <label for="section">Section:</label>
+        <input type="section" id="section" name="section" required><br><br>
+
+        <label for="policestation">Police Station:</label>
+        <input type="policestation" id="policestation" name="policestation" required><br><br>
+
+        <label for="fir">FIR No.:</label>
+        <input type="fir" id="fir" name="fir" required><br><br>
+
+        <label for="date">Date of Arrest:</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <br><p>Petitoner Details:</p>
+
+        <label for="petitioner">Name:</label>
+        <input type="text" id="petitioner" name="petitioner" required><br><br>
+
+        <label for="pfather">Father Name:</label>
+        <input type="text" id="pfather" name="pfather" required><br><br>
+
+        <label for="page">Age:</label>
+        <input type="text" id="page" name="page" required><br><br>
+
+        <label for="poccupation">Occupation:</label>
+        <input type="text" id="poccupation" name="poccupation" required><br><br>
+
+        <label for="paddress">Address:</label>
+        <input type="text" id="paddress" name="paddress" required><br><br>
+
+        <label for="business">Business:</label>
+        <input type="text" id="business" name="business" required><br><br>
+        
+        <label for="details">Case Details:</label>
+        <input type="text" id="details" name="details" required><br><br>
+
+        <br><p>Respondent Details:</p>
+
+        <label for="respondent">Name:</label>
+        <input type="text" id="respondent" name="respondent" required><br><br>
+
+        <label for="rfather">Father Name:</label>
+        <input type="text" id="rfather" name="rfather" required><br><br>
+
+        <label for="rage">Age:</label>
+        <input type="text" id="rage" name="rage" required><br><br>
+
+        <label for="roccupation">Occupation:</label>
+        <input type="text" id="roccupation" name="roccupation" required><br><br>
+
+        <label for="raddress">Address:</label>
+        <input type="text" id="raddress" name="raddress" required><br><br>
+
+        <label for="counsel">Counsel:</label>
+        <input type="text" id="counsel" name="counsel" required><br><br>
+
+        <button type="submit">Generate Document</button>
+    </form>
+</body>
+</html>
